@@ -271,6 +271,7 @@
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    z-index: 10;
 }
 
 .subitem a,
@@ -282,6 +283,10 @@
     padding: 10px 15px;
     background-color: inherit !important;
     color: #11101d;
+}
+
+.subitem a:hover {
+    background-color: #f6f6f6 !important;
 }
 
 .subnav a:hover {
@@ -300,7 +305,7 @@
 
 .subnav a:hover {
     color: #11101d;
-    background-color: #fff !important;
+    background-color: #f6f6f6 !important;
 }
 
 .visible {

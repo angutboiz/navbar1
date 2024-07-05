@@ -6,7 +6,11 @@ var filemanager = document.querySelector(".filemanager");
 
 closeBtn.addEventListener("click", () => {
     sidebar.classList.toggle("open");
+    var subfile = document.querySelector(".subfile");
     subfile.classList.add("visible");
+    var subsetting = document.querySelector(".subnavsetting");
+    subsetting.classList.add("visible");
+
     menuBtnChange(); //calling the function(optional)
 });
 
