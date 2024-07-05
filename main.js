@@ -3,8 +3,6 @@ let closeBtn = document.querySelector("#btn");
 let searchBtn = document.querySelector(".bx-search");
 var setting = document.querySelector(".setting");
 var filemanager = document.querySelector(".filemanager");
-var subitem = document.querySelector(".subitem");
-var subfile = document.querySelector(".subfile");
 
 closeBtn.addEventListener("click", () => {
     sidebar.classList.toggle("open");
@@ -28,11 +26,19 @@ function menuBtnChange() {
 }
 
 setting.addEventListener("click", function () {
-    subitem.classList.toggle("hidden");
+    var subitem = document.querySelector(".subitemsetting");
+    var subnav = document.querySelector(".subnavsetting");
+
+    if (sidebar.classList.contains("open")) {
+        subnav.classList.toggle("visible");
+    } else {
+        subitem.classList.toggle("hidden");
+    }
 });
 
 filemanager.addEventListener("click", function () {
-    subfile.classList.toggle("visible");
+    var subitem = document.querySelector(".subitemfile");
+    var subfile = document.querySelector(".subfile");
 
     var chevronIcon = filemanager.querySelector(".chevron i");
 
@@ -45,8 +51,8 @@ filemanager.addEventListener("click", function () {
     }
 
     if (sidebar.classList.contains("open")) {
-        return;
+        subfile.classList.toggle("visible");
     } else {
-        sidebar.classList.toggle("open");
+        subitem.classList.toggle("hidden");
     }
 });

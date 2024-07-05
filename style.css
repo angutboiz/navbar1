@@ -273,7 +273,8 @@
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
 
-.subitem a {
+.subitem a,
+.subnav a {
     display: block !important;
     height: unset !important;
     border-radius: 5px !important;
@@ -283,31 +284,31 @@
     color: #11101d;
 }
 
-.subitem a:hover {
+.subnav a:hover {
     color: #b8b6ca;
 }
-.filemanager .subfile {
+.subnav {
     padding-left: 50px;
 }
 
-.filemanager .subfile a {
+.subnav a {
     height: unset;
     padding: 5px 15px;
     border-radius: 5px;
     color: #fff;
 }
 
-.filemanager .subfile a:hover {
+.subnav a:hover {
     color: #11101d;
+    background-color: #fff !important;
 }
 
 .visible {
     visibility: hidden;
     height: 0 !important;
-    transition: all 0.5s ease;
 }
 
-.subfile {
+.subnav {
     transition: all 0.3s ease;
 
     height: 102px;
